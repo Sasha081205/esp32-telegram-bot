@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESP32-S3 Telegram Bot</title>
+    <style>
+        :root {
+            --primary-color: #2AABEE; /* Telegram Blue */
+            --bg-color: #f4f7f6;
+            --text-color: #333;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            width: 100%;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px 20px;
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .features {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .features li {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--text-color);
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #555;
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 20px;
+            text-align: center;
+            color: #777;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>ESP32-S3 Telegram Bot</h1>
+        <p>Remote IoT Control straight from your favourite messaging app</p>
+    </header>
+
+    <div class="container">
+        <h2>About the Project</h2>
+        <p>
+            This project bridges the gap between hardware and the cloud by turning an ESP32-S3 microcontroller into a smart Telegram Bot. 
+            Without writing a single line of app code, you get a beautiful, cross-platform interface to control your hardware from anywhere in the world.
+        </p>
+
+        <h2>Key Features</h2>
+        <ul class="features">
+            <li><strong>Global Control:</strong> Uses the Telegram API to bypass home routers and firewalls. Control your board over 4G/5G.</li>
+            <li><strong>Hardware Integration:</strong> Uses standard digital I/O to control the ESP32-S3 LED on Pin 2.</li>
+            <li><strong>Secure Access:</strong> Implements Chat ID verification so the bot only responds to you, ignoring unauthorised users.</li>
+            <li><strong>Custom Keyboards:</strong> Features an interactive reply keyboard on Telegram for quick, button-based commands instead of manual typing.</li>
+        </ul>
+
+        <h2>Get Started</h2>
+        <p>Want to build this yourself? All the C++ source code, wiring details, and setup instructions are available open-source on GitHub.</p>
+        
+        <!-- Replace the '#' below with the actual link to your GitHub repository -->
+        <a href="#" class="btn">View on GitHub</a>
+    </div>
+
+    <footer>
+        <p>Created by Sasha | Powered by ESP32 & Telegram API</p>
+    </footer>
+
+</body>
+</html>
